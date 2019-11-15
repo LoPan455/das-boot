@@ -1,21 +1,17 @@
 package com.boot;
 
+import com.boot.controller.HomeController;
 import org.junit.Test;
 
-import static junit.framework.Assert.assertTrue;
+import static junit.framework.Assert.*;
 
+public class AppTest {
 
-/**
- * Unit test for simple App.
- */
-public class AppTest 
-{
-    /**
-     * Rigorous Test :-)
-     */
     @Test
-    public void shouldAnswerWithTrue()
-    {
-        assertTrue( true );
+    public void testApp() {
+        HomeController homeController = new HomeController();
+        String result = homeController.home();
+        assertEquals("Das Boot, reporting for duty!", result);
     }
+
 }
