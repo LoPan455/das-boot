@@ -6,10 +6,10 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("api/v1/shipwreck")
+@RequestMapping("api/v1/")
 public class ShipwreckController {
 
-    @RequestMapping(value = "/", method = RequestMethod.GET)
+    @RequestMapping(value = "/shipwrecks", method = RequestMethod.GET)
     List<Shipwreck> list() {
         return ShipwreckStub.list();
     }
