@@ -16,7 +16,7 @@ public class ShipwreckController {
     private ShipwreckRepository shipwreckRepository;
 
     @RequestMapping(value = "shipwrecks", method = RequestMethod.GET)
-    List<Shipwreck> list() {
+    public List<Shipwreck> list() {
         return shipwreckRepository.findAll();
     }
 
